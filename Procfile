@@ -1,1 +1,1 @@
-web java $JAVA_OPTS -Dserver.port=$PORT -jar server/build/libs/football-cbb.jar
+web java $JAVA_OPTS -Dserver.port=$PORT -jar server/build/libs/*.jar
