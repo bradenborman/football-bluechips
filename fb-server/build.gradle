@@ -5,8 +5,12 @@ plugins {
     id 'war'
 }
 
+allprojects {
+    ext.gradleScriptDir = "${rootProject.projectDir}/gradle"
+}
+
 group = 'borman'
-sourceCompatibility = JavaVersion.VERSION_1_8
+sourceCompatibility = '1.8'
 
 repositories {
     mavenCentral()
