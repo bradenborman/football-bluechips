@@ -1,1 +1,1 @@
-web java $JAVA_OPTS -Dserver.port=$PORT -jar fb-server/build/libs/*.war
+web java $JAVA_OPTS -Dserver.port=$PORT -jar bluechips-server/build/libs/*.war

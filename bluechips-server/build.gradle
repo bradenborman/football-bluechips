@@ -36,6 +36,7 @@ test {
 
 //Needed for heroku
 task stage(dependsOn: ['build', 'clean'])
+build.mustRunAfter clean
 
 war {
     enabled = false
