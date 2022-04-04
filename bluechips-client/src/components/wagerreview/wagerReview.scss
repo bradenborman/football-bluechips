@@ -4,33 +4,74 @@
   padding: 1.5em;
   margin: 1em;
   border-radius: 12px;
+  min-height: 300px;
+  perspective: 100;
+  overflow: auto;
+  width: 500px;
 
-  h2 {
-    font-family: "Raleway", sans-serif;
-    margin-top: 0px;
-  }
+  .card {
+    transition: 0.8s;
+    transform-style: preserve-3d;
 
-  .bet {
-    font-style: italic;
-    margin: 1.5em;
-  }
+    &.flipped {
+      transform: rotateY(180deg);
+    }
 
-  .money-details {
-    font-size: 1.3em;
-    span.spotlight {
-      font-weight: bold;
-      &.cost {
-        color: rgb(0, 0, 0);
+    .front,
+    .back {
+      backface-visibility: hidden;
+      position: absolute;
+    }
+
+    .front {
+      h2 {
+        font-family: "Raleway", sans-serif;
+        margin-top: 0px;
       }
-      &.payout {
-        color: green;
+
+      .bet {
+        font-style: italic;
+        margin: 1.5em;
+        font-size: 1.2em;
+      }
+
+      .money-details {
+        font-size: 1.3em;
+        span.spotlight {
+          font-weight: bold;
+          &.cost {
+            color: rgb(0, 0, 0);
+          }
+          &.payout {
+            color: green;
+          }
+        }
+      }
+
+      .warning-message {
+        color: grey;
+        font-size: 0.7em;
+        margin-top: 1.2em;
+      }
+
+      button {
+        cursor: pointer;
+        margin: 0.4em;
       }
     }
-  }
 
-  .warning-message {
-    color: grey;
-    font-size: 0.7em;
-    margin-top: 1.2em;
+    .back {
+      transform: rotateY(180deg);
+      width: 100%;
+
+      .wager {
+        margin-top: 1em;
+        font-size: 1.3em;
+      }
+      .effective-date {
+        margin-top: 0.3em;
+        font-size: 0.8em;
+      }
+    }
   }
 }
