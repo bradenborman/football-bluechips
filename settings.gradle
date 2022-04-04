@@ -1,1 +1,8 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+    }
+}
+
+include("server")
 rootProject.name = 'football.bluechips'
