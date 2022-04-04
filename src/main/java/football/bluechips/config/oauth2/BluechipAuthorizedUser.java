@@ -6,11 +6,11 @@ import java.util.Map;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.oauth2.core.user.OAuth2User;
 
-public class BluechipOAuthUser implements OAuth2User {
+public class BluechipAuthorizedUser implements OAuth2User {
 
     private OAuth2User oauth2User;
 
-    public BluechipOAuthUser(OAuth2User oauth2User) {
+    public BluechipAuthorizedUser(OAuth2User oauth2User) {
         this.oauth2User = oauth2User;
     }
 

@@ -11,10 +11,7 @@ public class OAuthUserService extends DefaultOAuth2UserService {
     @Override
     public OAuth2User loadUser(OAuth2UserRequest userRequest) {
         OAuth2User user = super.loadUser(userRequest);
-        BluechipOAuthUser bluechipOAuthUser = new BluechipOAuthUser(user);
-        System.out.println(bluechipOAuthUser.getEmail());
-        System.out.println(bluechipOAuthUser.getFullName());
-        return bluechipOAuthUser;
+        return new BluechipAuthorizedUser(user);
     }
 
 }

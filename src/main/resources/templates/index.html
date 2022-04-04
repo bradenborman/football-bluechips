@@ -5,8 +5,8 @@
 </head>
 <body>
 
-<h1>This is a Heading</h1>
-<span th:text="${#request.userPrincipal.principal.name}"></span>
+<span th:text="${#request.userPrincipal.principal.fullName}"></span>
+<span th:text="${#request.userPrincipal.principal.email}"></span>
 
 </body>
 </html>
