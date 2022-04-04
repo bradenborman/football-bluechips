@@ -2,6 +2,7 @@ plugins {
     id 'org.springframework.boot' version '2.6.6'
     id 'io.spring.dependency-management' version '1.0.11.RELEASE'
     id 'java'
+    id 'war'
 }
 
 group = 'borman'
@@ -32,11 +33,6 @@ test {
 //Needed for heroku
 task stage(dependsOn: ['build', 'clean'])
 
-task finalizeBuild(type: Copy, dependsOn: build) {
-    from "${buildDir}/libs/server-${version}.jar"
-    into "${buildDir}/libs"
-    rename "server-${version}.jar", "football-cbb.jar"
-    delete "server-${version}.jar"
+war {
+    enabled = false
 }
-
-build.finalizedBy(finalizeBuild)
