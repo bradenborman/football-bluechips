@@ -1,0 +1,36 @@
+.container {
+  background-color: white;
+  display: inline-block;
+  padding: 1.5em;
+  margin: 1em;
+  border-radius: 12px;
+
+  h2 {
+    font-family: "Raleway", sans-serif;
+    margin-top: 0px;
+  }
+
+  .bet {
+    font-style: italic;
+    margin: 1.5em;
+  }
+
+  .money-details {
+    font-size: 1.3em;
+    span.spotlight {
+      font-weight: bold;
+      &.cost {
+        color: rgb(0, 0, 0);
+      }
+      &.payout {
+        color: green;
+      }
+    }
+  }
+
+  .warning-message {
+    color: grey;
+    font-size: 0.7em;
+    margin-top: 1.2em;
+  }
+}
