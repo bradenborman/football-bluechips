@@ -7,7 +7,7 @@ public class DevlServer extends FootballBluechips {
     public static void main(String[] args) {
         new DevlServer().configure(new SpringApplicationBuilder())
                 .initializers()
-                .profiles("local")
+                .profiles("local", "protected")
                 .run(args);
     }
 
