@@ -1,5 +1,6 @@
-package football.bluechips.config.oauth2;
+package football.bluechips.config.security;
 
+import football.bluechips.config.security.models.BluechipAuthorizedUser;
 import org.springframework.security.oauth2.client.userinfo.DefaultOAuth2UserService;
 import org.springframework.security.oauth2.client.userinfo.OAuth2UserRequest;
 import org.springframework.security.oauth2.core.user.OAuth2User;

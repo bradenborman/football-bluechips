@@ -4,5 +4,5 @@ pluginManagement {
     }
 }
 
-include("bluechips-server")
+include "bluechips-server", "bluechips-client"
 rootProject.name = 'football.bluechips'

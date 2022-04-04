@@ -1,4 +1,4 @@
-package football.bluechips.config.oauth2;
+package football.bluechips.config.security.models;
 
 import java.util.Collection;
 import java.util.Map;
@@ -8,7 +8,7 @@ import org.springframework.security.oauth2.core.user.OAuth2User;
 
 public class BluechipAuthorizedUser implements OAuth2User {
 
-    private OAuth2User oauth2User;
+    private final OAuth2User oauth2User;
 
     public BluechipAuthorizedUser(OAuth2User oauth2User) {
         this.oauth2User = oauth2User;
@@ -24,6 +24,9 @@ public class BluechipAuthorizedUser implements OAuth2User {
         return oauth2User.getAuthorities();
     }
 
+    /**
+     * @deprecated (please use getFullName instead)
+     **/
     @Override
     @Deprecated
     public String getName() {
