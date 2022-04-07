@@ -7,7 +7,7 @@
     "start": "webpack-dev-server --mode development --open --hot",
     "clean": "rimraf build/",
     "webpack": "cross-env NODE_ENV=production webpack --mode production",
-    "build": "npm run test && npm run clean && npm run webpack",
+    "build": "npm run clean && npm run webpack",
     "host": "webpack-dev-server --mode development --host 10.8.20.6 --hot",
     "test": "jest"
   },

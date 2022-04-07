@@ -1,0 +1,142 @@
+@import url(https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap);
+#wager-builder {
+  background-color: white;
+  display: inline-block;
+  padding: 1em;
+  margin: 3em;
+  border-radius: 12px;
+  min-width: 450px;
+}
+#wager-builder h2 {
+  font-family: "Raleway", sans-serif;
+}
+#wager-builder form {
+  padding: 20px;
+}
+#wager-builder form select {
+  margin-left: 0.5em;
+  margin-bottom: 1em;
+}
+#wager-builder form textarea {
+  width: 100%;
+}
+#wager-builder form .risks {
+  margin-top: 2em;
+  text-align: center;
+}
+#wager-builder form .risks .title {
+  text-align: left;
+  font-weight: bold;
+}
+#wager-builder form .risks .risk {
+  display: inline-block;
+  text-align: center;
+  margin: 0.5em 1em 0em 1em;
+}
+#wager-builder form .risks .risk input {
+  margin-left: 0.2em;
+}
+#wager-builder form button {
+  margin-top: 2.6em;
+  padding: 0.2em;
+}
+
+.container {
+  background-color: white;
+  display: inline-block;
+  padding: 1.5em;
+  margin: 1em;
+  border-radius: 12px;
+  position: relative;
+  width: 450px;
+  height: 300px;
+  overflow: auto;
+  vertical-align: top;
+  box-shadow: #8a8a8a 2px 2px;
+}
+.container .card h2 {
+  font-family: "Raleway", sans-serif;
+  margin: 0px 0px 20px 0px;
+  font-size: 1em;
+}
+.container .card .offerer {
+  opacity: 1;
+}
+.container .card .bet {
+  font-style: italic;
+  margin: 1.7em;
+  font-size: 1.2em;
+}
+.container .card .money-details {
+  font-size: 1.3em;
+}
+.container .card .money-details span.spotlight {
+  font-weight: bold;
+}
+.container .card .money-details span.spotlight.cost {
+  color: black;
+}
+.container .card .money-details span.spotlight.payout {
+  color: green;
+}
+.container .card .warning-message {
+  color: grey;
+  font-size: 0.7em;
+  margin-top: 1.2em;
+}
+.container .card button {
+  cursor: pointer;
+  margin: 0.4em;
+  opacity: 1;
+}
+.container .card .cash-animation {
+  position: absolute;
+  right: 15px;
+  top: 20px;
+  background-color: #4da74d;
+  padding: 0.4em;
+  color: white;
+  font-family: "Raleway", sans-serif;
+  font-weight: bold;
+  border-radius: 15px;
+  font-size: 1.3em;
+  opacity: 0;
+}
+.container .card.acknowledged h2 {
+  font-style: italic;
+}
+.container .card.acknowledged button {
+  opacity: 0;
+  transition: opacity 0.35s;
+}
+.container .card.acknowledged .offerer {
+  opacity: 0;
+  transition: opacity 0.35s;
+}
+.container .card.acknowledged .warning-message {
+  visibility: hidden;
+}
+.container .card.accepted.acknowledged .cash-animation {
+  opacity: 1;
+  animation: cashPopup 1.7s;
+  animation-fill-mode: forwards;
+  animation-delay: 0.5s;
+}
+
+@keyframes cashPopup {
+  0% {
+    top: 20px;
+  }
+  85% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 0;
+    top: -20px;
+  }
+}
+
+body {
+  background-color: #e7e7e7;
+}

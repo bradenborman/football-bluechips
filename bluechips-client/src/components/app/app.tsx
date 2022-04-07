@@ -1,7 +1,6 @@
 import React from "react";
 import { WagerBuilder } from "../wagerbuilder/wagerBuilder";
 import { WagerReview } from "../wagerreview/wagerReview";
-import { flatMap } from "lodash";
 
 require("./app.scss");
 
@@ -14,19 +13,17 @@ export const App: React.FC<AppProps> = (props: AppProps) => {
       <WagerReview
         cost={100}
         payout={1000}
-        from={"Braden Borman"}
+        from={"Zane Lavy"}
         bet={
           "Jamar Chase will have 2 tds and 100 rec-yards AND Tom Brady will throw for 5 tds"
         }
-        accepted={false}
         actionDate="12/4/22"
       />
       <WagerReview
-        cost={100}
-        payout={1000}
-        from={"Braden Borman"}
-        bet={"Jamar Chase will have 2 tds and 100 rec-yards"}
-        accepted={false}
+        cost={500}
+        payout={500}
+        from={"Erik Meyer"}
+        bet={"Tua will throw for 200 yards. Rush for 45"}
         actionDate="12/4/22"
       />
     </>
